@@ -8,10 +8,14 @@
 ## 1. 项目结构
 
 - src/collector.py：主采集脚本（含重试、robots 检查、频控、日志、留痕、去重）。
-- requirements.txt：依赖清单。
-- data/：默认输出目录（运行后生成）。
+- requirements.txt：依赖清单（含 Streamlit/Plotly/Statsmodels/Kaleido）。
+- data/：默认输出目录（运行后生成），含 DICTIONARY.md/DICTIONARY.json（字段字典）。
 - logs/：请求日志 CSV（运行后生成）。
 - runs/：每次运行的清单 manifest（运行后生成）。
+- bi/：交互式仪表盘（Streamlit）与截图导出脚本。
+- notebook/：任务三模型 Notebook 与说明。
+- crawler/：爬取流程与合规说明（PROCESS.md）。
+- license.txt：合规与使用声明（仅使用公开数据）。
 
 ## 2. 安装与运行
 
@@ -36,6 +40,10 @@ python3 src/collector.py \
   --wb-end-year 2025 \
   --loglevel INFO
 ```
+# 示例运行（notebook向）
+python3 src/collector.py --wb-country CHN \
+  --wb-indicators "IP.PAT.RESD,EN.ATM.CO2E.PC,SP.POP.65UP.TO.ZS,IT.NET.USER.ZS" \
+  --wb-start-year 2000 --wb-end-year 2025 --loglevel INFO
 
 可选参数（部分）：
 - `--outdir`：输出目录（默认 data）。
@@ -87,6 +95,8 @@ python3 src/collector.py \
   - `unit`：单位（v2 响应通常无明确单位，置空）。
   - `decimal`：小数位建议。
 
+说明：若个别指标返回异常（如 `unexpected_payload`），说明该指标在当前时间窗或口径存在返回 message/异常结构。可尝试缩短时间窗、稍后重试，或替换为相近指标（例如绿色主题可考虑 `GB.XPD.RSDV.GD.ZS` 等）。
+
 补充：如需覆盖“普惠金融”更针对性的代理指标，可将 `--wb-indicators` 添加例如私人部门信贷占 GDP（`FS.AST.PRVT.GD.ZS`）等宏观可用指标（以官方口径为准）。
 
 ## 4. 清洗、去重与留痕
@@ -101,11 +111,15 @@ python3 src/collector.py \
   - 内置 `requests` + `urllib3` 重试（429/5xx 指数退避），并尊重 `Retry-After`。
   - 解析错误与不可预期响应会记录 warning/错误信息，不中断全局流程。
 
+此外：若 robots 禁止（如 `sousuo.gov.cn/s.htm`），脚本将跳过该域名（记录 `robots disallow`），输出 0 条符合合规策略。
+
 ## 5. 合规与频控
 
 - 严格检查 `robots.txt`：若站点 robots 无法获取或不允许抓取，则放弃访问并做日志记录。
 - 频控（每域名）：通过 `--rpm` 限速（默认 12 次/分钟），并在请求之间 sleep。
 - 不登录、不绕过站点限制、不采集个人敏感信息；仅抓取公开的列表页与开放 API。
+
+详情见 `license.txt` 与 `crawler/PROCESS.md`。
 
 ## 6. 如何扩展
 
@@ -113,8 +127,16 @@ python3 src/collector.py \
 - 扩展 API 指标：在命令行通过 `--wb-indicators` 添加指标代码（用逗号分隔）。
 - 扩展输出：可将 JSONL/CSV 导入数据库或数据湖，保持 `run_id` 以便溯源。
 
+BI 扩展：如提供省级或机构维度数据（CSV），可在仪表盘中增加地图与分组柱形图（当前版本默认不展示）。
+
 ## 7. 已知限制
 
 - 国务院搜索列表的页面结构可能调整，导致解析项减少或缺失；必要时需更新解析选择器。
 - robots 获取失败时默认停止访问该域名（合规优先），可能导致该源空结果。
 - 世界银行个别年份值可能为空或修订，建议按需做缺失值处理与口径核对。
+
+## 8. 任务映射与交付
+
+- 任务一（找能用的数据）：两类来源（网页列表 + 开放 API）、字段字典、去重与留痕、失败重试与合规控制。
+- 任务二（BI 做图）：4 张核心图 + KPI，操作说明与下载按钮，支持导出 PNG 截图。
+- 任务三（Python 建模）：评分模型 + 简单预测，Notebook 可复用、含特征/权重/方向说明与 MAPE 验证。

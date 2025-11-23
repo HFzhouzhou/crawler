@@ -1,0 +1,22 @@
+Compliance Notice
+
+This repository collects, processes, and visualizes ONLY public information from openly accessible sources. No login is used; no paywalls are bypassed; no personal sensitive data (e.g., ID numbers, phone numbers) is collected.
+
+Crawler rules
+- Always respect robots.txt of each domain. If robots disallow or cannot be fetched, the crawler will not access that domain.
+- Apply per-domain rate limits (RPM) and exponential backoff on 429/5xx with Retry-After.
+- Record request logs and errors for auditing.
+
+Data usage
+- Public data is used for research/analytics demonstration only.
+- Please follow the original sources' terms of use and attribution.
+
+Attribution
+- World Bank Open Data (api.worldbank.org/v2) under CC BY 4.0, see: https://data.worldbank.org/summary
+- Government websites content remains the property of original owners.
+
+Security & Privacy
+- No attempts to de-obfuscate, circumvent security controls, or collect PII.
+
+Contact
+- For takedown or questions, please open an issue in the repository.

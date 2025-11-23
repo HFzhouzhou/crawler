@@ -1,0 +1,56 @@
+{
+  "sources": [
+    {
+      "name": "World Bank Open Data",
+      "endpoint": "https://api.worldbank.org/v2/country/{ISO3}/indicator/{INDICATOR}?format=json",
+      "country": "CHN",
+      "indicators": [
+        {"id": "IP.PAT.RESD", "cn_name": "居民专利申请量", "unit": "件", "theme": "科技金融"},
+        {"id": "EN.ATM.CO2E.PC", "cn_name": "人均二氧化碳排放", "unit": "吨/人", "theme": "绿色金融"},
+        {"id": "SP.POP.65UP.TO.ZS", "cn_name": "65岁及以上人口占比", "unit": "%", "theme": "养老金融"},
+        {"id": "IT.NET.USER.ZS", "cn_name": "互联网使用率", "unit": "%", "theme": "数字金融"}
+      ],
+      "sampling_window": {"start_year": 2000, "end_year": 2025},
+      "sampling_frequency": "annual",
+      "outputs": ["data/wb/worldbank_*.csv"]
+    },
+    {
+      "name": "State Council Search (list only)",
+      "url": "https://sousuo.gov.cn/s.htm",
+      "query": "金融 五篇 大文章",
+      "sampling_window": {"start_date": "2024-01-01", "end_date": "2025-12-31"},
+      "sampling_frequency": "daily_or_weekly_low_freq",
+      "note": "Respect robots; if disallowed or robots not accessible, do not crawl.",
+      "outputs": ["data/news/gov_search_*.jsonl"]
+    }
+  ],
+  "fields": {
+    "worldbank_csv": [
+      {"name": "country", "desc": "国家名称"},
+      {"name": "countryiso3code", "desc": "国家ISO3"},
+      {"name": "indicator_id", "desc": "指标代码"},
+      {"name": "indicator_name", "desc": "指标名称(英文)"},
+      {"name": "year", "desc": "年份"},
+      {"name": "value", "desc": "数值(可能为空)"},
+      {"name": "unit", "desc": "单位(通常为空)"},
+      {"name": "decimal", "desc": "小数位建议"}
+    ],
+    "gov_news_jsonl": [
+      {"name": "source", "desc": "来源域名"},
+      {"name": "query", "desc": "检索关键词"},
+      {"name": "url", "desc": "结果链接(不抓详情)"},
+      {"name": "title", "desc": "标题"},
+      {"name": "snippet", "desc": "摘要/片段"},
+      {"name": "pub_date", "desc": "发布日期(尽力解析)"},
+      {"name": "collected_at", "desc": "采集时间戳(ISO)"},
+      {"name": "run_id", "desc": "运行批次号"},
+      {"name": "fingerprint", "desc": "URL的SHA-256用于去重"}
+    ]
+  },
+  "compliance": {
+    "robots": "If robots disallow or cannot be fetched, skip domain.",
+    "rate_limit": "Per-domain RPM with backoff and Retry-After",
+    "no_login": true,
+    "no_pii": true
+  }
+}

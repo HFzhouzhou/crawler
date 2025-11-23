@@ -1,0 +1,37 @@
+# OS/IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Jupyter/Cache
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Streamlit/BI
+.streamlit/
+bi/__pycache__/
+
+# Data outputs (keep schema dictionary files)
+data/*
+!data/DICTIONARY.md
+!data/DICTIONARY.json
+
+# Logs and run manifests
+logs/
+runs/
