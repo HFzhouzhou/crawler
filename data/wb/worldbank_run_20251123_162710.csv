@@ -1,0 +1,76 @@
+country,countryiso3code,indicator_id,indicator_name,date,value,unit,decimal
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2024,,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2023,,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2022,,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2021,1426644,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2020,1344817,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2019,1243568,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2018,1393815,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2017,1245709,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2016,1204981,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2015,968252,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2014,801135,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2013,704936,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2012,535313,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2011,415829,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2010,293066,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2009,229096,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2008,194579,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2007,153060,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2006,122318,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2005,93485,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2004,65786,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2003,56769,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2002,39806,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2001,30038,,0
+China,CHN,IP.PAT.RESD,"Patent applications, residents",2000,25346,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2024,14.665268836569,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2023,14.3160774690688,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2022,13.781930345649,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2021,13.2057410345267,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2020,12.6452376078587,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2019,12.0613659717192,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2018,11.5162092042497,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2017,10.9809606634325,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2016,10.4907994645602,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2015,10.053420914992,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2014,9.6661987378912,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2013,9.3562686156071,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2012,9.08920186808881,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2011,8.85916872860311,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2010,8.66147143784386,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2009,8.49817888668038,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2008,8.35535290441098,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2007,8.21258625792709,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2006,8.05386346846253,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2005,7.88962840533466,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2004,7.73725110121901,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2003,7.57962663220469,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2002,7.40162875834336,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2001,7.21351682273765,,0
+China,CHN,SP.POP.65UP.TO.ZS,Population ages 65 and above (% of total population),2000,7.01747574076251,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2024,92,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2023,90.6,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2022,75.6113,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2021,73.0532,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2020,70.0528,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2019,64.0809,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2018,59.2,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2017,54.3,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2016,53.2,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2015,50.3,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2014,47.9,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2013,45.8,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2012,42.3001,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2011,38.3,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2010,34.3,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2009,28.9,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2008,22.6,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2007,16,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2006,10.5232,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2005,8.52326,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2004,7.3,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2003,6.2,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2002,4.5957,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2001,2.63965,,0
+China,CHN,IT.NET.USER.ZS,Individuals using the Internet (% of population),2000,1.77591,,0

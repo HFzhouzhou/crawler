@@ -1,0 +1,35 @@
+{
+  "run_id": "run_20251123_162710",
+  "started_at": "2025-11-23T16:27:10+0800",
+  "params": {
+    "outdir": "data",
+    "logs": "logs",
+    "rpm": 10,
+    "timeout": 15,
+    "max_pages": 5,
+    "query": "金融 五篇 大文章",
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31",
+    "wb_country": "CHN",
+    "wb_indicators": "IP.PAT.RESD,EN.ATM.CO2E.PC,SP.POP.65UP.TO.ZS,IT.NET.USER.ZS",
+    "wb_start_year": 2000,
+    "wb_end_year": 2025,
+    "loglevel": "INFO"
+  },
+  "finished_at": "2025-11-23T16:27:45+0800",
+  "outputs": {
+    "gov_news": "data/news/gov_search_run_20251123_162710.jsonl",
+    "worldbank": "data/wb/worldbank_run_20251123_162710.csv",
+    "requests_log": "logs/requests_run_20251123_162710.csv"
+  },
+  "counts": {
+    "gov_items": 0,
+    "wb_rows": 75,
+    "wb_errors": [
+      {
+        "indicator": "EN.ATM.CO2E.PC",
+        "error": "unexpected_payload"
+      }
+    ]
+  }
+}
